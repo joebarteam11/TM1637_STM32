@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../../../../carte-asservissement"
+		},
+		{
+			"name": "test_tm1637",
+			"path": ".."
+		},
+		{
+			"path": "../../../../AX12_STM32"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.py": "python",
+			"optional": "cpp",
+			"istream": "cpp",
+			"ostream": "cpp",
+			"ratio": "cpp",
+			"system_error": "cpp",
+			"array": "cpp",
+			"functional": "cpp",
+			"tuple": "cpp",
+			"type_traits": "cpp",
+			"utility": "cpp"
+		}
+	}
+}
