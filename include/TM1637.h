@@ -202,6 +202,9 @@ class TM1637 {
     */
   void setDisplay(bool on);
   
+  
+  void writeInt(int input);
+
   private:  
     // DigitalOut _mosi;
     // DigitalIn _miso;    

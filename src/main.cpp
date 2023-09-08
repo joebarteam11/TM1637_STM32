@@ -74,7 +74,7 @@ int main() {
     printf("Hello World\r\n"); //    
     screen.cls();        
     wait_us(1000000);
-    screen.setBrightness(TM1637_BRT4);            
+    screen.setBrightness(TM1637_BRT3);            
     wait_us(1000000);
     screen.cls(); 
     screen.writeData(hello_str); 
