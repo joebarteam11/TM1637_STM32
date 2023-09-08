@@ -43,31 +43,6 @@ TM1637::KeyData_t keydata;
 
 //New Constructor
 TM1637 screen(D8, D7);    
-TM1637::DisplayData_t data;
-
-// Function to convert an integer to a fixed-size array of short int using FONT_7S containg the 7-segment font
-void intTo7seg(int input, char* result, int size) {
-    int temp = input;
-    for (int i = size - 1; i >= 0; i--) {
-        int digit = temp % 10;
-        short font = FONT_7S[digit];
-        //File the array
-        result[i] = font;
-        printf("result[%d] = 0x%02X\r\n", i, result[i]);
-        // Move to the next digit
-        temp /= 10;
-    }
-    bool nonZeroFound = false;
-    for(int i = 0; i < size; i++) {
-        if(result[i] == C7_0 && !nonZeroFound) {
-            result[i] = 0;
-        }
-        else {
-            nonZeroFound = true;
-        }
-    }
-}
-
 
 int main() {
     
@@ -85,8 +60,7 @@ int main() {
 
     for(int i = 0; i < 10000; i++) {
         //screen.cls();
-        intTo7seg(i,data,sizeof(data));
-        screen.writeData(data);
+        screen.writeInt(i);
         wait_us(5000);
     }
 }
